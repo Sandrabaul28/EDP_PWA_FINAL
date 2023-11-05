@@ -3,8 +3,10 @@
   <head>
       <meta charset="UTF-8">
       <title>Dashboard</title>
+      <link rel="manifest"  href="manifest.json">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
       <style type="text/css">
           .wrapper { 
               width: 1200px;
@@ -17,10 +19,10 @@
     <div class="wrapper" >
         <div class="container-fluid">
             <div class="row">
-              <h2 class="text-center"><img class="logo" style="height: 150px;" src="image/idle.jpg"></img>CUSTOMER'S INFORMATION</h2>
+              <h2 class="text-center"><img  style="height: 100px;" src="image/idle.png"></img>CUSTOMER'S INFORMATION</h2>
                 <div class="col-md-20">
                     <div class="page-header clearfix" >
-                        <h2 class="pull-left" style="color: blueviolet;">LIST</h2>
+                        <h2 class="pull-left" style="color: blueviolet;">CHECKLIST</h2>
                         <a href="create.php" class="btn btn-primary pull-right">Add New Customer</a>
                     </div>
                     <?php
@@ -32,8 +34,8 @@
                     if($info = mysqli_query($conn, $data)){
                         if(mysqli_num_rows($info) > 0){
                             echo "<table class='table table-bordered table-striped'>
-                                    <thead>
-                                      <tr>
+                                    <thead style='background-color: lightblue';>
+                                      <tr >
                                         <th>id</th>
                                         <th>fullname</th>
                                         <th>address</th>

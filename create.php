@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header">
-                        <h2>Customer's Fill-up Form</h2>
+                        <h2><img  style="height: 100px;" src="image/idle.png">Customer's Fill-up Form</h2>
                     </div>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 

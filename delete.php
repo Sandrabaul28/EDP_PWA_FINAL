@@ -34,17 +34,19 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
     </style>
 </head>
 <body>
+<h2 class="text-center"><img  style="height: 100px;" src="image/idle.png"></img>CUSTOMER'S INFORMATION</h2>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
+
                 <div class="col-md-12">
                     <div class="page-header">
-                        <h1>Delete Record</h1>
+                        <h1>Remove Record</h1>
                     </div>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="alert alert-danger fade in">
+                        <div class="alert alert-success fade in">
                             <input type="hidden" name="id" value="<?php echo trim($_GET["id"]); ?>"/>
-                            <p>Are you sure you want to delete this record?</p><br>
+                            <p>Are you sure you want to remove this record?</p><br>
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
                                 <a href="index.php" class="btn btn-default">No</a>

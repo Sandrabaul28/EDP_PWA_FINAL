@@ -155,8 +155,13 @@ $sql = "UPDATE `info` SET `fullname`= '$fullname',`fullname`= '$fullname', `addr
 
 
 
-                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <input onClick="myFunction()" type="submit" class="btn btn-primary" value="Save">
                         <a href="index.php" class="btn btn-default">Cancel</a>
+                        <script>
+                            function myFunction() {
+                              alert( "Successfully  Saved! ");
+                            }
+                        </script>
                     </form>
                 </div>
             </div>
