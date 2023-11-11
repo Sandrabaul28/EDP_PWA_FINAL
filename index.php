@@ -22,7 +22,7 @@
               <h2 class="text-center"><img  style="height: 100px;" src="image/idle.png"></img>CUSTOMER'S INFORMATION</h2>
                 <div class="col-md-20">
                     <div class="page-header clearfix" >
-                        <h2 class="pull-left" style="color: blueviolet;">CHECKLIST</h2>
+                        <h2 class="pull-left" style="color: black ;">CHECKLIST</h2>
                         <a href="create.php" class="btn btn-primary pull-right">Add New Customer</a>
                     </div>
                     <?php
@@ -40,8 +40,6 @@
                                         <th>fullname</th>
                                         <th>address</th>
                                         <th>age</th>
-                                        <th>birthdate</th>
-                                        <th>contact</th>
                                         <th>email</th>
                                       </tr>
                                     </thead>
@@ -52,8 +50,6 @@
                                             <td>" . $customer['fullname'] . "</td>
                                             <td>" . $customer['address'] . "</td>
                                             <td>" . $customer['age'] . "</td>
-                                            <td>" . $customer['birthdate'] . "</td>
-                                            <td>" . $customer['contact'] . "</td>
                                             <td>" . $customer['email'] . "</td>
                                             <td>
                                               <a href='read.php?id=". $customer['fullname'] ."' title='View customer' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>

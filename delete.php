@@ -4,6 +4,7 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
     $id = $_POST["id"];
 
     $query = "DELETE FROM info WHERE fullname = '$id'";
+    
  
     if (mysqli_query($conn, $query)) {
         header("location: index.php");
