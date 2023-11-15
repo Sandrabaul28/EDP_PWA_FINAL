@@ -11,8 +11,11 @@
           .wrapper { 
               width: 1200px;
               margin: 0 auto;
-              
           }
+          body{
+            background: lightblue;
+          }
+          
       </style>
   </head>
   <body>
@@ -36,25 +39,30 @@
                             echo "<table class='table table-bordered table-striped'>
                                     <thead style='background-color: lightblue';>
                                       <tr >
-                                        <th>id</th>
-                                        <th>fullname</th>
-                                        <th>address</th>
-                                        <th>age</th>
-                                        <th>email</th>
+                                        <th>Id</th>
+                                        <th>First Name</th>
+                                        <th>Middle Name</th>
+                                        <th>Last Name</th>
+                                        <th>Address</th>
+                                        <th>Age</th>
+                                        <th>Action</th>
+
                                       </tr>
                                     </thead>
                                     <tbody>";
                                 while($customer = mysqli_fetch_array($info)) {
                                     echo "<tr>
                                             <td>" . $customer['id'] . "</td>
-                                            <td>" . $customer['fullname'] . "</td>
+                                            <td>" . $customer['fname'] . "</td>
+                                            <td>" . $customer['mname'] . "</td>
+                                            <td>" . $customer['lname'] . "</td>
                                             <td>" . $customer['address'] . "</td>
                                             <td>" . $customer['age'] . "</td>
-                                            <td>" . $customer['email'] . "</td>
+                                            
                                             <td>
-                                              <a href='read.php?id=". $customer['fullname'] ."' title='View customer' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>
-                                              <a href='edit.php?id=". $customer['fullname'] ."' title='Edit customer' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>
-                                              <a href='delete.php?id=". $customer['fullname'] ."' title='Delete customer' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>
+                                              <a href='read.php?id=". $customer['id'] ."' title='View customer' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>
+                                              <a href='edit.php?id=". $customer['id'] ."' title='Edit customer' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>
+                                              <a href='delete.php?id=". $customer['id'] ."' title='Delete customer' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>
                                             </td>
                                           </tr>";
                                 }
