@@ -9,6 +9,20 @@
             width: 1200px;
             margin: 0 auto;
         }
+        #printButton {
+            display: block;
+        }
+
+        /* Hide the print button when printing */
+        @media print {
+            #printButton {
+                display: none;
+            }
+        }
+        @media .btn-back {
+                display: none !important;
+        }
+
     </style>
 </head>
 <body>  
@@ -73,8 +87,10 @@
                         <label>Email</label>
                         <p class="form-control-static"><?php echo $email ?></p>
                     </div>
-                    <p><a href="index.php" class="btn btn-primary">Back</a></p>
+                    <p><a  href="index.php" class="btn btn-primary">Back</a></p>
+                    <button id="printButton">Print</button>
                 </div>
+                <script src="script.js"></script>
             </div>
         </div>
     </div>

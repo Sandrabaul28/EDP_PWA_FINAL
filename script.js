@@ -1,24 +1,7 @@
-// document.getElementById('student-form').addEventListener('submit', function (e) {
-//    e.preventDefault(); // Prevent the default form submission
+document.addEventListener("DOMContentLoaded", function() {
+    const printButton = document.getElementById("printButton");
 
-//    // Get form data
-//    const formData = new FormData(this);
-
-//    // Send a POST request to create.php
-//    fetch("index.php", {
-//        method: 'POST',
-//        body: formData,
-//    })
-//    .then(response => response.text())
-//    .then(data => {
-//       if (data === "Student information saved successfully") {
-//          // Display a success message on the web page
-//          alert("Student information saved successfully");
-//          // You can also clear the form or perform other actions here
-//      } else {
-//          // Display an error message on the web page
-//          alert("Error");
-//      }
-//    })
-//    .catch(error => console.error('Error:', error));
-// });
+    printButton.addEventListener("click", function() {
+        window.print(); // Trigger the browser's print functionality
+    });
+});
